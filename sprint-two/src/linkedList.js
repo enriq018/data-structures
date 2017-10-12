@@ -47,6 +47,18 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
+    var recursion = function(obj, target) {
+
+      if (obj.next === null) {
+        if (obj.value === target) { return true; }
+        return false;
+      }
+      if (obj.value === target) {
+        return true;
+      }
+      return recursion(obj.next, target);
+    };
+    return recursion(list.head, target);
   };
 
   return list;
