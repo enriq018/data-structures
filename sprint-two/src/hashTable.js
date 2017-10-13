@@ -52,9 +52,9 @@ HashTable.prototype.remove = function(k) {
     if (this._storage[index][i][0] === k) {
       //get the index
       //splice (index, 1)
-      console.log('before splice: ', this._storage[index]);
+      // console.log('before splice: ', this._storage[index]);
       this._storage[index].splice(this._storage[index][i], 1);
-      console.log('after splice: ', this._storage[index]);
+      // console.log('after splice: ', this._storage[index]);
     }
   }
 };
